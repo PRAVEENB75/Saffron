@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Saffron Cultivation & Kesar Corm Exchange | Yenepoya Project</title>
+    <meta name="description" content="Automated Smart Saffron Cultivation System using ESP32 IoT, Microclimate Control & Sound Wave Frequency Tuning. Premium Kesar Corms, Stigmas & Petals Marketplace.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Canvas for Glitter & Sparkle Effects -->
+    <canvas id="glitterCanvas"></canvas>
+
+    <!-- Top Announcement & Contact Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-contact">
+                <span><i class="fa-solid fa-phone"></i> Phone: <strong>+91 9148164252</strong></span>
+                <span class="divider">|</span>
+                <span><i class="fa-solid fa-envelope"></i> Email: <strong>praveenkpatil08@gmail.com</strong></span>
+                <span class="divider">|</span>
+                <span class="academic-badge"><i class="fa-solid fa-graduation-cap"></i> Yenepoya Institute of Technology (VTU)</span>
+            </div>
+            <div class="top-ticker">
+                <span class="pulse-sparkle">✨ Official Kesar Corms & Saffron Dealer Hub</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header" id="header">
+        <div class="container navbar">
+            <a href="#" class="brand-logo">
+                <div class="logo-icon-sparkle">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-title">KESAR<span class="highlight">SMART</span></span>
+                    <span class="brand-subtitle">IoT Saffron & Corm Exchange</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <div class="mobile-nav-header">
+                    <span class="mobile-nav-title"><i class="fa-solid fa-seedling text-gold"></i> Menu</span>
+                    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close navigation menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <a href="#overview" class="nav-link active">Overview</a>
+                <a href="#marketplace" class="nav-link">Corm Marketplace</a>
+                <a href="#simulator" class="nav-link">IoT Live Simulator</a>
+                <a href="#synopsis" class="nav-link">Project Synopsis</a>
+                <a href="#science" class="nav-link">Growth Science</a>
+                <a href="#calculator" class="nav-link">Yield Calculator</a>
+                <a href="#dealer-portal" class="nav-link">Dealer Portal</a>
+                <div class="mobile-nav-footer">
+                    <a href="#dealer-portal" class="btn btn-primary btn-block mobile-menu-quote-btn">
+                        <i class="fa-solid fa-handshake"></i> Dealer Quote
+                    </a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn" aria-label="View Shopping Cart">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-label">Cart</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <a href="#dealer-portal" class="btn btn-shimmer btn-sm header-quote-btn">
+                    <i class="fa-solid fa-handshake"></i> <span class="quote-btn-text">Dealer Quote</span>
+                </a>
+                <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Open Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="overview">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-tag glowing-badge">
+                        <i class="fa-solid fa-microchip"></i> ESP32 IoT Microclimate + Acoustic Wave Frequency Tuning
+                    </div>
+                    <h1 class="hero-title">
+                        Revolutionizing <span class="shimmer-text">Smart Saffron Cultivation</span> & Corm Trading
+                    </h1>
+                    <p class="hero-description">
+                        An automated, climate-independent saffron farming chamber powered by ESP32 microcontrollers, DHT sensors, ultrasonic misting, and 432Hz/528Hz acoustic stimulation to maximize secondary metabolites and crocin yield anywhere in the world.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#marketplace" class="btn btn-primary btn-lg glitter-btn">
+                            <i class="fa-solid fa-shop"></i> Explore Kesar Corms & Buds
+                        </a>
+                        <a href="#simulator" class="btn btn-glass btn-lg">
+                            <i class="fa-solid fa-sliders"></i> Test IoT Chamber Demo
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon"><i class="fa-solid fa-temperature-arrow-down"></i></div>
+                            <div class="stat-info">
+                                <h3>15°C – 22°C</h3>
+                                <p>Automated Microclimate</p>
+                            </div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon"><i class="fa-solid fa-droplet"></i></div>
+                            <div class="stat-info">
+                                <h3>40% – 60%</h3>
+                                <p>Ultrasonic Moisture Control</p>
+                            </div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon"><i class="fa-solid fa-wave-square"></i></div>
+                            <div class="stat-info">
+                                <h3>Sound Wave</h3>
+                                <p>Tuning Frequency Metabolite Boost</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-wrapper glowing-frame">
+                        <img src="assets/images/smart_iot_chamber.jpg" alt="Smart Saffron IoT Growth Chamber" class="hero-img">
+                        <div class="visual-badge">
+                            <div class="pulse-dot"></div>
+                            <span>ESP32 Live Sensing Active</span>
+                        </div>
+                        <div class="glitter-stars">✨ ✨ ✨</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product & Kesar Corms Marketplace -->
+        <section class="section marketplace-section" id="marketplace">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-heading"><i class="fa-solid fa-coins"></i> High-Yield Saffron Corms & Products</span>
+                    <h2 class="section-title">Buy & Trade <span class="shimmer-gold">Kesar Corms (Bulbs)</span> & Saffron</h2>
+                    <p class="section-subtitle">
+                        Direct connection for Dealers, Wholesale Buyers, and Indoor Hydroponic Growers. Guaranteed healthy corms, mother bulbs, premium stigmas, and medicinal petals.
+                    </p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All Items</button>
+                    <button class="filter-btn" data-filter="corms">Kesar Corms & Bulbs</button>
+                    <button class="filter-btn" data-filter="stigma">Pure Stigma Spice</button>
+                    <button class="filter-btn" data-filter="petals">Medicinal Petals</button>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Product 1 -->
+                    <div class="product-card glass-card glitter-hover" data-category="corms">
+                        <div class="product-badge">Grade A+ Mother Corm</div>
+                        <div class="product-img-box">
+                            <img src="assets/images/saffron_corms_buds.jpg" alt="Single High-Yield Saffron Corm">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-title">Single Premium Kesar Corm (Bulb)</h3>
+                            <p class="product-desc">Selected high-density crocus corms (8-12g+). Ready for planting, high sprouting rate, and 3-5 years productive lifespan.</p>
+                            <div class="product-specs">
+                                <span><i class="fa-solid fa-seedling"></i> Viability: 98%</span>
+                                <span><i class="fa-solid fa-rotate"></i> Lifecycle: 3-5 Yrs</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="price-val">Quote / KG</span>
+                                    <span class="price-sub">Bulk Rates Available</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-cart-btn" data-id="p1" data-name="Single Premium Kesar Corm" data-unit="kg">
+                                    <i class="fa-solid fa-cart-plus"></i> Add to Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card glass-card glitter-hover" data-category="corms">
+                        <div class="product-badge badge-purple">Multi-Daughter Cluster</div>
+                        <div class="product-img-box">
+                            <img src="assets/images/saffron_corms_buds.jpg" alt="Daughter Cells Saffron Corm Cluster">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-title">Corms with Daughter Cells</h3>
+                            <p class="product-desc">Mother corms naturally multiplying with healthy daughter bulbs attached. Ideal for rapid farm expansion and multi-year harvest.</p>
+                            <div class="product-specs">
+                                <span><i class="fa-solid fa-diagram-project"></i> Multiplier: 3x-5x</span>
+                                <span><i class="fa-solid fa-shield-halved"></i> Fungus Treated</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="price-val">Dealer Bulk</span>
+                                    <span class="price-sub">Direct Farm Rate</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-cart-btn" data-id="p2" data-name="Corms with Daughter Cells" data-unit="kg">
+                                    <i class="fa-solid fa-cart-plus"></i> Add to Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card glass-card glitter-hover" data-category="corms">
+                        <div class="product-badge badge-gold">Sprouting Stage Corms</div>
+                        <div class="product-img-box">
+                            <img src="assets/images/saffron_flower_field.jpg" alt="Pre-Sprouted Kesar Corms">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-title">Hydroponic Sprouting Kesar Corms</h3>
+                            <p class="product-desc">Chilled and temperature-conditioned corms (15–20°C treated) ready for immediate insertion into indoor growth chambers.</p>
+                            <div class="product-specs">
+                                <span><i class="fa-solid fa-snowflake"></i> Pre-Chilled</span>
+                                <span><i class="fa-solid fa-bolt"></i> Fast Bloom</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="price-val">Pre-Conditioned</span>
+                                    <span class="price-sub">Chamber Ready</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-cart-btn" data-id="p3" data-name="Hydroponic Sprouting Corms" data-unit="kg">
+                                    <i class="fa-solid fa-cart-plus"></i> Add to Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card glass-card glitter-hover" data-category="stigma">
+                        <div class="product-badge badge-red">Pure Stigma</div>
+                        <div class="product-img-box">
+                            <img src="assets/images/saffron_stigma_petals.jpg" alt="Pure Red Saffron Stigma Threads">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-title">Smart-Harvested Saffron Stigma</h3>
+                            <p class="product-desc">Vivid deep red threads harvested from chamber-grown flowers. High crocin, safranal, and picrocrocin flavor density.</p>
+                            <div class="product-specs">
+                                <span><i class="fa-solid fa-utensils"></i> Grade 1 Culinary</span>
+                                <span><i class="fa-solid fa-award"></i> 100% Pure Threads</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="price-val">Grams / KG</span>
+                                    <span class="price-sub">Lab Certified</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-cart-btn" data-id="p4" data-name="Smart-Harvested Pure Stigma" data-unit="gram">
+                                    <i class="fa-solid fa-cart-plus"></i> Add to Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card glass-card glitter-hover" data-category="petals">
+                        <div class="product-badge badge-purple">Pharma / Health</div>
+                        <div class="product-img-box">
+                            <img src="assets/images/saffron_stigma_petals.jpg" alt="Dried Purple Saffron Petals">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-title">Medicinal Saffron Petals (SPE)</h3>
+                            <p class="product-desc">Rich in anthocyanins, antioxidants, and anti-inflammatory compounds. Used in herbal teas, antidepressant formulas, and PCOS therapies.</p>
+                            <div class="product-specs">
+                                <span><i class="fa-solid fa-heart-pulse"></i> High Anthocyanin</span>
+                                <span><i class="fa-solid fa-mortar-pestle"></i> Pharma Grade</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="price-val">Bulk Petals</span>
+                                    <span class="price-sub">Secondary Harvest</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-cart-btn" data-id="p5" data-name="Medicinal Saffron Petals" data-unit="kg">
+                                    <i class="fa-solid fa-cart-plus"></i> Add to Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live IoT Microclimate Simulator -->
+        <section class="section simulator-section" id="simulator">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-heading"><i class="fa-solid fa-microchip"></i> Interactive Hardware Demo</span>
+                    <h2 class="section-title">ESP32 <span class="shimmer-text">Live Chamber Simulator</span></h2>
+                    <p class="section-subtitle">
+                        Test the real-time sensor feedback loop, automated relay switches, acoustic wave frequency tuning, and environmental thresholds.
+                    </p>
+                </div>
+
+                <div class="simulator-layout">
+                    <!-- Simulator Controls & Gauges -->
+                    <div class="sim-panel glass-card glitter-border">
+                        <div class="sim-panel-header">
+                            <h3><i class="fa-solid fa-sliders"></i> Microclimate Control Inputs</h3>
+                            <button id="resetSimBtn" class="btn btn-outline btn-xs"><i class="fa-solid fa-rotate-left"></i> Reset Defaults</button>
+                        </div>
+
+                        <!-- Temperature Control Slider -->
+                        <div class="control-group">
+                            <div class="control-label">
+                                <span><i class="fa-solid fa-temperature-three-quarters"></i> Chamber Temperature:</span>
+                                <strong id="tempDisplay" class="value-highlight">22.0 °C</strong>
+                            </div>
+                            <input type="range" id="tempSlider" min="10" max="38" value="22" step="0.5" class="slider-input">
+                            <div class="slider-markers">
+                                <span>10°C (Cold)</span>
+                                <span class="optimal-tag">Target: 15–24°C</span>
+                                <span>38°C (Hot)</span>
+                            </div>
+                        </div>
+
+                        <!-- Humidity Control Slider -->
+                        <div class="control-group">
+                            <div class="control-label">
+                                <span><i class="fa-solid fa-droplet"></i> Relative Humidity (DHT11):</span>
+                                <strong id="humidityDisplay" class="value-highlight">52 %</strong>
+                            </div>
+                            <input type="range" id="humiditySlider" min="20" max="90" value="52" step="1" class="slider-input">
+                            <div class="slider-markers">
+                                <span>20% (Dry)</span>
+                                <span class="optimal-tag">Target: 40–60%</span>
+                                <span>90% (Damp)</span>
+                            </div>
+                        </div>
+
+                        <!-- CO2 Level Slider -->
+                        <div class="control-group">
+                            <div class="control-label">
+                                <span><i class="fa-solid fa-wind"></i> CO₂ Concentration:</span>
+                                <strong id="co2Display" class="value-highlight">500 ppm</strong>
+                            </div>
+                            <input type="range" id="co2Slider" min="300" max="800" value="500" step="10" class="slider-input">
+                            <div class="slider-markers">
+                                <span>300 ppm</span>
+                                <span class="optimal-tag">Optimal: 400-600 ppm</span>
+                                <span>800 ppm</span>
+                            </div>
+                        </div>
+
+                        <!-- Sound Frequency Waves Toggle -->
+                        <div class="control-group feature-box">
+                            <div class="feature-header">
+                                <div>
+                                    <h4><i class="fa-solid fa-wave-square"></i> Sound Wave / Tuning Frequency</h4>
+                                    <p class="feature-sub">Stimulates plant secondary metabolites & flavonoids</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="soundToggle" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="freq-options" id="freqOptions">
+                                <label class="radio-label">
+                                    <input type="radio" name="freq" value="432" checked> <span>432 Hz Harmonic</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="freq" value="528" > <span>528 Hz Solfeggio</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- PWM LED Grow Light Toggle -->
+                        <div class="control-group feature-box">
+                            <div class="feature-header">
+                                <div>
+                                    <h4><i class="fa-solid fa-lightbulb"></i> PWM Purple Grow Light</h4>
+                                    <p class="feature-sub">Red (660nm) + Blue (450nm) spectrum for photosynthesis</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="ledToggle" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hardware Status & Live Actuators -->
+                    <div class="sim-panel glass-card glitter-border">
+                        <div class="sim-panel-header">
+                            <h3><i class="fa-solid fa-laptop-code"></i> ESP32 Actuator Response & Logs</h3>
+                            <span class="status-badge status-online"><i class="fa-solid fa-circle"></i> Chamber Active</span>
+                        </div>
+
+                        <!-- Actuators Visual Status -->
+                        <div class="actuators-grid">
+                            <div class="actuator-card" id="fanActuator">
+                                <div class="actuator-icon fan-icon"><i class="fa-solid fa-fan"></i></div>
+                                <div class="actuator-info">
+                                    <h4>Cooler Fan</h4>
+                                    <span class="actuator-state" id="fanStatus">OFF</span>
+                                </div>
+                                <span class="actuator-trigger">ON if Temp > 24°C</span>
+                            </div>
+
+                            <div class="actuator-card" id="mistActuator">
+                                <div class="actuator-icon mist-icon"><i class="fa-solid fa-cloud-rain"></i></div>
+                                <div class="actuator-info">
+                                    <h4>Ultrasonic Mist Maker</h4>
+                                    <span class="actuator-state" id="mistStatus">OFF</span>
+                                </div>
+                                <span class="actuator-trigger">ON if Humidity &lt; 40%</span>
+                            </div>
+
+                            <div class="actuator-card" id="soundActuator">
+                                <div class="actuator-icon sound-icon"><i class="fa-solid fa-volume-high"></i></div>
+                                <div class="actuator-info">
+                                    <h4>Acoustic Speaker</h4>
+                                    <span class="actuator-state" id="soundStatus">ACTIVE</span>
+                                </div>
+                                <span class="actuator-trigger" id="soundFreqLabel">432 Hz Active</span>
+                            </div>
+
+                            <div class="actuator-card" id="ledActuator">
+                                <div class="actuator-icon led-icon"><i class="fa-solid fa-sun"></i></div>
+                                <div class="actuator-info">
+                                    <h4>Purple Grow LED</h4>
+                                    <span class="actuator-state" id="ledStatus">ON (80% PWM)</span>
+                                </div>
+                                <span class="actuator-trigger">Photoperiod Control</span>
+                            </div>
+                        </div>
+
+                        <!-- Simulated Output Console Log -->
+                        <div class="console-box">
+                            <div class="console-header">
+                                <span><i class="fa-solid fa-terminal"></i> ESP32 System Log Stream</span>
+                                <span class="log-time" id="logTime">Live</span>
+                            </div>
+                            <div class="console-body" id="consoleBody">
+                                <div class="log-entry log-info">[SYSTEM] ESP32 Wi-Fi Connected to Firebase & ThingSpeak</div>
+                                <div class="log-entry log-success">[SENSOR] DHT11: Temp = 22.0°C, Humidity = 52.0%</div>
+                                <div class="log-entry log-info">[PWM] Grow LED set to 80% Duty Cycle</div>
+                                <div class="log-entry log-info">[ACOUSTIC] Sound wave speaker playing 432Hz tuning tone</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Synopsis & Academic Architecture -->
+        <section class="section synopsis-section" id="synopsis">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-heading"><i class="fa-solid fa-book-bookmark"></i> VTU Engineering Major Project</span>
+                    <h2 class="section-title">Project Synopsis & <span class="shimmer-text">Architecture</span></h2>
+                    <p class="section-subtitle">
+                        Comprehensive documentation of the Smart Saffron Cultivation System submitted to Visvesvaraya Technological University.
+                    </p>
+                </div>
+
+                <!-- Academic Banner & Team -->
+                <div class="academic-banner glass-card glitter-border">
+                    <div class="institution-details">
+                        <h3><i class="fa-solid fa-university"></i> YENEPOYA INSTITUTE OF TECHNOLOGY</h3>
+                        <p>N.H. 13, Thodar, Moodbidri-574225, Mangalore, D.K. | Academic Year 2025-26</p>
+                        <p class="univ-tag">Affiliated to Visvesvaraya Technological University (VTU), Belagavi, Karnataka</p>
+                    </div>
+
+                    <div class="team-grid">
+                        <div class="team-col">
+                            <h4><i class="fa-solid fa-users"></i> Project Authors (Dept of ECE)</h4>
+                            <ul>
+                                <li><strong>PRAVEEN KENCHANAGOUDA PATIL</strong> <span>(4DM23EC026)</span></li>
+                                <li><strong>SANDHYA</strong> <span>(4DM23EC037)</span></li>
+                                <li><strong>SPOORTHI</strong> <span>(4DM23EC043)</span></li>
+                                <li><strong>TEJA RAGHAVENDRA SHANBHAG</strong> <span>(4DM23EC050)</span></li>
+                            </ul>
+                        </div>
+                        <div class="team-col">
+                            <h4><i class="fa-solid fa-user-tie"></i> Guidance & Mentorship</h4>
+                            <p><strong>Guide:</strong> Dr. Harun Bangali (Professor, Dept of ECE)</p>
+                            <p><strong>Coordinator:</strong> Mr. Gangadhara</p>
+                            <p><strong>HOD:</strong> Dr. Prasanna Kumar C</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem Statement & Solution -->
+                <div class="synopsis-grid">
+                    <div class="synopsis-card glass-card">
+                        <h3><i class="fa-solid fa-triangle-exclamation text-danger"></i> Problem Statement</h3>
+                        <p>Saffron (Crocus sativus) is the world's most valuable spice, requiring extremely strict climatic conditions not found in most regions:</p>
+                        <ul class="styled-list">
+                            <li><i class="fa-solid fa-circle-xmark"></i> High summer temperatures during sprouting destroy corms.</li>
+                            <li><i class="fa-solid fa-circle-xmark"></i> Unstable humidity causes fungal rot in corm tissue.</li>
+                            <li><i class="fa-solid fa-circle-xmark"></i> Lack of cold environment (15–18°C) prevents flowering.</li>
+                            <li><i class="fa-solid fa-circle-xmark"></i> Geographical restrictions limit natural growth to specific regions.</li>
+                        </ul>
+                    </div>
+
+                    <div class="synopsis-card glass-card">
+                        <h3><i class="fa-solid fa-square-check text-success"></i> Proposed IoT Solution</h3>
+                        <p>An automated artificial growing chamber maintaining perfect microclimate conditions year-round:</p>
+                        <ul class="styled-list">
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>DHT11/22 Sensor:</strong> Continuous environmental telemetry.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Ultrasonic Fogger & Fans:</strong> IF-ELSE threshold controls.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Acoustic Wave Tuning:</strong> Sound frequency for flavonoid stimulation.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <strong>Firebase & ThingSpeak:</strong> Realtime cloud data & mobile app dashboard.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3-Layer Architecture Overview -->
+                <div class="architecture-box glass-card glitter-border">
+                    <h3 class="text-center"><i class="fa-solid fa-cubes"></i> 3-Layer System Architecture</h3>
+                    <div class="layers-grid">
+                        <div class="layer-card">
+                            <div class="layer-num">1</div>
+                            <h4>Hardware Layer</h4>
+                            <ul>
+                                <li>ESP32 / Arduino Microcontroller</li>
+                                <li>DHT11 / DHT22 Temp & Humidity Sensor</li>
+                                <li>IRFZ44N N-Channel MOSFET Modules</li>
+                                <li>Relay Switch Board & Buzzer</li>
+                                <li>PWM Purple LED Light Strip</li>
+                                <li>Ultrasonic Mist Maker (Fogger)</li>
+                                <li>Cooler Fan & Thermocol Ice Box</li>
+                            </ul>
+                        </div>
+
+                        <div class="layer-card">
+                            <div class="layer-num">2</div>
+                            <h4>Cloud Layer</h4>
+                            <ul>
+                                <li><strong>ThingSpeak Platform:</strong> Realtime Data Visualization & Charts</li>
+                                <li><strong>Firebase Realtime Database:</strong> Cloud Sync & Actuator Control State</li>
+                            </ul>
+                        </div>
+
+                        <div class="layer-card">
+                            <div class="layer-num">3</div>
+                            <h4>Application Layer</h4>
+                            <ul>
+                                <li><strong>Android Mobile Application:</strong> User Interface dashboard</li>
+                                <li>Light intensity & frequency cycle sliders</li>
+                                <li>Realtime alerts & crop recommendation notifications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Saffron Growth Science -->
+        <section class="section science-section" id="science">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-heading"><i class="fa-solid fa-flask"></i> Agricultural Research</span>
+                    <h2 class="section-title">Saffron Growth Science & <span class="shimmer-gold">Climate Thresholds</span></h2>
+                    <p class="section-subtitle">
+                        Scientific findings on optimal growth temperatures, soil conditions, CO₂ enrichment, and acoustic stimulation.
+                    </p>
+                </div>
+
+                <!-- Lifecycle Stages Timeline -->
+                <div class="stages-container">
+                    <div class="stage-card glass-card">
+                        <div class="stage-step">Stage 1</div>
+                        <h3>Germination & Early Growth</h3>
+                        <div class="stage-temp">15°C – 20°C</div>
+                        <p>Bulb planting and initial root emergence. Soil must stay cool to avoid bulb stress.</p>
+                    </div>
+
+                    <div class="stage-card glass-card">
+                        <div class="stage-step">Stage 2</div>
+                        <h3>Vegetative Growth</h3>
+                        <div class="stage-temp">18°C – 22°C</div>
+                        <p>Leaf expansion and root network development. Requires mild weather away from heat/frost.</p>
+                    </div>
+
+                    <div class="stage-card glass-card stage-highlight">
+                        <div class="stage-step">Stage 3</div>
+                        <h3>Flowering & Bloom</h3>
+                        <div class="stage-temp">15°C – 18°C</div>
+                        <p>Most critical phase. Cold stimulus triggers vivid purple bloom and red stigma formation.</p>
+                    </div>
+
+                    <div class="stage-card glass-card">
+                        <div class="stage-step">Stage 4</div>
+                        <h3>Harvesting & Senescence</h3>
+                        <div class="stage-temp">16°C – 18°C</div>
+                        <p>Flowers picked at dawn. Corms rest and multiply into daughter cells from May to August.</p>
+                    </div>
+                </div>
+
+                <!-- CO2 & Sound Frequency Research Cards -->
+                <div class="research-grid">
+                    <div class="research-card glass-card">
+                        <div class="research-icon"><i class="fa-solid fa-wind"></i></div>
+                        <h3>CO₂ Management (400–600 ppm)</h3>
+                        <p>Elevated carbon dioxide levels in controlled greenhouses accelerate photosynthesis, leading to larger corms and up to 35% higher stigma weight yield per flower.</p>
+                    </div>
+
+                    <div class="research-card glass-card">
+                        <div class="research-icon"><i class="fa-solid fa-volume-high"></i></div>
+                        <h3>Acoustic Wave Stimulation</h3>
+                        <p>Sound vibrations trigger physiological secondary metabolites. Playing 432Hz/528Hz acoustic frequencies promotes flavonoid production and speeds up flowering response.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Yield & ROI Calculator -->
+        <section class="section calculator-section" id="calculator">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-heading"><i class="fa-solid fa-calculator"></i> Business Intelligence</span>
+                    <h2 class="section-title">Saffron Yield & <span class="shimmer-text">ROI Calculator</span></h2>
+                    <p class="section-subtitle">
+                        Estimate expected flower count, dry stigma harvest weight, and revenue projection based on your chamber size or corm quantity.
+                    </p>
+                </div>
+
+                <div class="calculator-box glass-card glitter-border">
+                    <div class="calc-inputs">
+                        <div class="form-group">
+                            <label for="cormCountInput"><i class="fa-solid fa-seedling"></i> Total Kesar Corms (Bulbs):</label>
+                            <input type="number" id="cormCountInput" value="1000" min="100" step="100" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="chamberTypeSelect"><i class="fa-solid fa-box"></i> Setup Method:</label>
+                            <select id="chamberTypeSelect" class="form-control">
+                                <option value="1.2">Indoor Smart Chamber (ESP32 IoT Optimized)</option>
+                                <option value="1.0">Traditional Soil Bed</option>
+                                <option value="1.35">Vertical Hydroponic Racks (CO2 & Sound Wave Enhanced)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="calc-results">
+                        <div class="result-tile">
+                            <span class="res-label">Est. Flowers Produced</span>
+                            <span class="res-val" id="resFlowers">1,200</span>
+                        </div>
+                        <div class="result-tile">
+                            <span class="res-label">Dry Stigma Yield</span>
+                            <span class="res-val" id="resStigma">8.40 grams</span>
+                        </div>
+                        <div class="result-tile">
+                            <span class="res-label">Multiplied Daughter Corms</span>
+                            <span class="res-val" id="resDaughters">3,000 Corms</span>
+                        </div>
+                        <div class="result-tile res-highlight">
+                            <span class="res-label">Est. Stigma Harvest Value</span>
+                            <span class="res-val" id="resRevenue">Quote / Market Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dealer & Buyer Quotation Portal -->
+        <section class="section dealer-section" id="dealer-portal">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-heading"><i class="fa-solid fa-handshake"></i> Wholesale Trade</span>
+                    <h2 class="section-title">Dealer & Buyer <span class="shimmer-gold">Quotation Portal</span></h2>
+                    <p class="section-subtitle">
+                        Connect directly with our Kesar part supplier desk for bulk orders, dealer partnerships, and corm distribution.
+                    </p>
+                </div>
+
+                <div class="dealer-layout">
+                    <div class="dealer-info glass-card">
+                        <h3><i class="fa-solid fa-building-columns"></i> Official Contact Desk</h3>
+                        <p>Submit your quantity requirement and delivery details. Our project team and dealer representative will contact you immediately.</p>
+
+                        <div class="contact-details-box">
+                            <div class="contact-item">
+                                <i class="fa-solid fa-phone-volume text-gold"></i>
+                                <div>
+                                    <strong>Phone Contact:</strong>
+                                    <p class="contact-highlight">+91 9148164252</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-envelope-open-text text-gold"></i>
+                                <div>
+                                    <strong>Official Email:</strong>
+                                    <p class="contact-highlight">praveenkpatil08@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-location-dot text-gold"></i>
+                                <div>
+                                    <strong>Academic Project Hub:</strong>
+                                    <p>Yenepoya Institute of Technology, Moodbidri, Mangalore, Karnataka</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dealer-features">
+                            <div class="d-feat"><i class="fa-solid fa-truck-fast"></i> Safe Moisture-Proof Corm Packaging</div>
+                            <div class="d-feat"><i class="fa-solid fa-certificate"></i> Certified Disease-Free Corm Harvest</div>
+                            <div class="d-feat"><i class="fa-solid fa-headset"></i> IoT Chamber Installation Assistance</div>
+                        </div>
+                    </div>
+
+                    <div class="dealer-form-box glass-card glitter-border">
+                        <form id="dealerForm">
+                            <h3><i class="fa-solid fa-paper-plane"></i> Request Wholesale Quotation</h3>
+                            
+                            <div class="form-group">
+                                <label for="buyerName">Full Name / Business Name *</label>
+                                <input type="text" id="buyerName" required placeholder="e.g. Rahul Sharma / Saffron Traders" class="form-control">
+                            </div>
+
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="buyerPhone">Contact Phone *</label>
+                                    <input type="text" id="buyerPhone" required placeholder="+91 9148164252" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="buyerEmail">Email Address *</label>
+                                    <input type="email" id="buyerEmail" required placeholder="praveenkpatil08@gmail.com" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="buyerType">Category</label>
+                                    <select id="buyerType" class="form-control">
+                                        <option value="Dealer">Commercial Dealer / Wholesaler</option>
+                                        <option value="Farmer">Indoor Hydroponic Farmer</option>
+                                        <option value="Researcher">University / Agricultural Researcher</option>
+                                        <option value="Buyer">Individual Buyer</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cormQuantity">Required Quantity (KG / Bulbs)</label>
+                                    <input type="text" id="cormQuantity" placeholder="e.g. 50 KG Corms / 5,000 Bulbs" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="buyerMessage">Inquiry Details / Specific Requirements</label>
+                                <textarea id="buyerMessage" rows="3" placeholder="Specify if you require single corms, daughter corm clusters, or pre-conditioned hydroponic bulbs..." class="form-control"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block glitter-btn btn-lg">
+                                <i class="fa-solid fa-paper-plane"></i> Submit Dealer Quote Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Slide-Over Drawer -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-basket-shopping"></i> Selected Items for Quote</h3>
+            <button class="close-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="cart-body" id="cartBody">
+            <div class="empty-cart-msg">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Your quote cart is empty. Browse items from the Kesar Corm Marketplace.</p>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total Item Types:</span>
+                <strong id="cartTotalItems">0</strong>
+            </div>
+            <button class="btn btn-primary btn-block glitter-btn" id="checkoutQuoteBtn">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Proceed to Request Dealer Quote
+            </button>
+        </div>
+    </div>
+
+    <!-- Confirmation Popup Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box glass-card glitter-border text-center">
+            <div class="modal-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3 id="modalTitle">Quotation Request Dispatched!</h3>
+            <p id="modalMessage">Thank you! Your quotation request has been sent directly to <strong>praveenkpatil08@gmail.com</strong>. Praveen will contact you shortly.</p>
+            
+            <div class="modal-contact-card">
+                <p>Official Direct Contact:</p>
+                <p><strong><i class="fa-solid fa-phone"></i> +91 9148164252</strong></p>
+                <p><strong><i class="fa-solid fa-envelope"></i> praveenkpatil08@gmail.com</strong></p>
+            </div>
+
+            <button class="btn btn-primary btn-md" id="closeModalBtn">Close Window</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-seedling text-gold"></i>
+                    <span class="brand-title">KESAR<span class="highlight">SMART</span></span>
+                </div>
+                <p>Automated Saffron Cultivation & Corm Trading Platform. Built as an ECE Major Engineering Project at Yenepoya Institute of Technology (VTU).</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#marketplace">Corm Marketplace</a></li>
+                    <li><a href="#simulator">IoT Chamber Demo</a></li>
+                    <li><a href="#synopsis">VTU Synopsis</a></li>
+                    <li><a href="#dealer-portal">Dealer Portal</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Project Desk</h4>
+                <p><i class="fa-solid fa-phone"></i> Phone: <strong>+91 9148164252</strong></p>
+                <p><i class="fa-solid fa-envelope"></i> Email: <strong>praveenkpatil08@gmail.com</strong></p>
+                <p><i class="fa-solid fa-location-dot"></i> Yenepoya Institute of Technology, Moodbidri, Mangalore</p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>© 2025-2026 Smart Saffron Cultivation & Monitoring System | Praveen, Sandhya, Spoorthi, Teja | VTU</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
