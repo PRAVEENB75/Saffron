@@ -1150,6 +1150,32 @@ input:checked + .toggle-slider:before { transform: translateX(22px); }
     box-shadow: 0 0 15px var(--gold-glow);
 }
 
+select.form-control {
+    background-color: #0d111d;
+    color: var(--text-primary);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f59e0b' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.4rem;
+    padding-right: 2.5rem;
+}
+
+select.form-control option {
+    background-color: #0b0f19;
+    color: #f8fafc;
+    padding: 0.75rem 1rem;
+}
+
+select.form-control option:hover,
+select.form-control option:checked {
+    background-color: #1e293b;
+    color: var(--gold-primary);
+}
+
 .calc-results {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
